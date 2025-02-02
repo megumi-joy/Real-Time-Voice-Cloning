@@ -19,3 +19,6 @@ encoder/saved_models/*
 synthesizer/saved_models/*
 vocoder/saved_models/*
 venv/
+saved_models/default/synthesizer.pt
+saved_models/default/encoder.pt
+saved_models/default/vocoder.pt

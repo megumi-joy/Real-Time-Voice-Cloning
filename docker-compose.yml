@@ -1,0 +1,16 @@
+version: '3'
+services:
+  voice-cloning:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    devices:
+      - /dev/snd:/dev/snd
+    runtime: nvidia
+    network_mode: host
+    # For better container management
+    restart: unless-stopped
+    # Add shared memory for better GUI performance
+    shm_size: '2gb'
